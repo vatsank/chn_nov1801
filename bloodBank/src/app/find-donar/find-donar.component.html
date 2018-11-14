@@ -1,0 +1,15 @@
+<div class='form-group'>
+
+    <label for="srch">Search Donar</label>
+
+    <input type="search" id='srch' [(ngModel)]='bloodGroup' (blur)='change()' class='form-control'>
+
+    <button [disabled]='isDisabled' class='btn btn-danger' (click)='find()'>Search</button>
+
+</div>
+
+<div>
+
+    <p>Donar For : {{bloodGroup}}</p>
+    <p>{{donarDetails}}</p>
+</div>

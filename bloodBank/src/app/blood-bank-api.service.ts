@@ -1,5 +1,5 @@
 import { BloodDonar } from './bloodDonar';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -15,8 +15,27 @@ export class BloodBankAPIService {
       return this.http.get<BloodDonar[]>(`${this.baseURL}donars`);
   }
 
-  findAllDonorsWithPromise(): Promise<BloodDonar[]> {
-    return this.http.get<BloodDonar[]>(`${this.baseURL}donars`).toPromise();
+  findAllDonorsWithExceptionHandling(name: string): Observable<BloodDonar[]> {
+
+    if(name.length > 10) {
+      throw Error('Length should be less than 10 ');
+    } else {
+    return this.http.get<BloodDonar[]>(`${this.baseURL}donars`);
+    }
+}
+
+invoke() {
+   try {
+     this.findAllDonorsWithExceptionHandling('abc');
+   } catch (error) {
+      console.log(error.message);
+   }
+   finally{
+      console.log('done');
+   }
+}
+  findAllDonorsWithPromise(): Promise<HttpResponse<Object>> {
+    return this.http.get<HttpResponse<Object>>('https://reqres.in/api/users/1').toPromise();
 }
 
 }

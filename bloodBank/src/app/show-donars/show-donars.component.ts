@@ -10,16 +10,16 @@ import { BloodDonar } from '../bloodDonar';
 export class ShowDonarsComponent implements OnInit {
 
   donarList: BloodDonar[];
+  dummy: Object;
   constructor(private service: BloodBankAPIService) { }
 
   ngOnInit() {
 
-    this.service.findAllDonors().
-                     subscribe(data => this.donarList = data,
+    this.service.findAllDonors().subscribe(data => this.donarList = data,
                                err => console.log(err),
                                () => console.log('completed'));
 
-     // this.service.findAllDonorsWithPromise().then(data => this.donarList = data);
+      // this.service.findAllDonorsWithPromise().then(data => this.dummy = data);
   }
 
 }
