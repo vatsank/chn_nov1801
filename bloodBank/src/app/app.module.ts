@@ -11,6 +11,9 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShowDonarsComponent } from './show-donars/show-donars.component';
 import { FindDonarComponent } from './find-donar/find-donar.component';
+import { MenuComponent } from './menu/menu.component';
+import { SearchHospitalComponent } from './search-hospital/search-hospital.component';
+import { ShowHospitalComponent } from './show-hospital/show-hospital.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { FindDonarComponent } from './find-donar/find-donar.component';
     ContentComponent,
     FooterComponent,
     ShowDonarsComponent,
-    FindDonarComponent
+    FindDonarComponent,
+    MenuComponent,
+    SearchHospitalComponent,
+    ShowHospitalComponent
   ],
   imports: [
     BrowserModule,
