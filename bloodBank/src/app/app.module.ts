@@ -14,6 +14,11 @@ import { FindDonarComponent } from './find-donar/find-donar.component';
 import { MenuComponent } from './menu/menu.component';
 import { SearchHospitalComponent } from './search-hospital/search-hospital.component';
 import { ShowHospitalComponent } from './show-hospital/show-hospital.component';
+import { CampDetailsComponent } from './camp-details/camp-details.component';
+import { PastCampsComponent } from './past-camps/past-camps.component';
+import { FutureCampsComponent } from './future-camps/future-camps.component';
+import { LoginComponent } from './login/login.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { ShowHospitalComponent } from './show-hospital/show-hospital.component';
     FindDonarComponent,
     MenuComponent,
     SearchHospitalComponent,
-    ShowHospitalComponent
+    ShowHospitalComponent,
+    CampDetailsComponent,
+    PastCampsComponent,
+    FutureCampsComponent,
+    LoginComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

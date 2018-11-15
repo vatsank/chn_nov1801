@@ -1,9 +1,11 @@
-<label>Enter the City</label>
-<input type='text' [(ngModel)]='city'>
+<div class='form-group'>
+    <label>Enter the City</label>
+    <input type='text' [(ngModel)]='city' class='form-control'>
+</div>
 <app-show-hospital [location]='city' (hospitalList)='onChange($event)'></app-show-hospital>
 
 
 
 <ul class='list-group'>
-    <li *ngFor='let eachHosiptal of list' class='list-group-item'>{{eachHosiptal}}</li>
+    <li *ngFor='let eachHospital of list' class='list-group-item'>{{eachHospital}}</li>
 </ul>
