@@ -19,20 +19,21 @@ export class ManageRequestComponent implements OnInit {
     reqHospital: 'Vijaya'
   };
 
-
   constructor(private service: BloodBankAPIService) { }
 
   ngOnInit() {
 
     this.service.getAllRequests().subscribe(resp => this.requestList = resp);
-
   }
 
   submit(){
-
     console.log(this.request);
 
-    this.requestList.push(this.request);
+    this.service.addRequest(this.request).subscribe(response => {
+
+      this.requestList.push(response);
+    });
+
   }
 
 }
