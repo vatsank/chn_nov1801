@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { LocationListComponent } from './../location-list/location-list.component';
+import { ComponentAdderService } from './../component-adder.service';
+import { Component, OnInit, ViewContainerRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-find-donar',
@@ -11,7 +13,10 @@ export class FindDonarComponent implements OnInit {
   bloodGroup = 'opos';
   donarDetails: string;
 
-  constructor() { }
+  @ViewChild('locRef', {read: ViewContainerRef}) viewRef: ViewContainerRef;
+  city = '';
+
+  constructor(private service: ComponentAdderService) { }
 
   ngOnInit() {
   }
@@ -30,5 +35,22 @@ export class FindDonarComponent implements OnInit {
      }
 
      this.isDisabled = true;
+  }
+
+  remove() {
+    this.service.removeComponent();
+  }
+  showLocation(){
+
+       this.service.setViewRef(this.viewRef);
+       const compRef = this.service.addComponent(LocationListComponent);
+
+      const com = (<LocationListComponent>compRef);
+
+      com.selected.subscribe(value => {
+        this.city = value;
+
+      });
+
   }
 }

@@ -19,6 +19,7 @@ import { PastCampsComponent } from './past-camps/past-camps.component';
 import { FutureCampsComponent } from './future-camps/future-camps.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
+import { LocationListComponent } from './location-list/location-list.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { LogoutComponent } from './logout/logout.component';
     PastCampsComponent,
     FutureCampsComponent,
     LoginComponent,
-    LogoutComponent
+    LogoutComponent,
+    LocationListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,6 +46,7 @@ import { LogoutComponent } from './logout/logout.component';
     FormsModule
   ],
   providers: [HttpClient],
+  entryComponents: [LocationListComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
