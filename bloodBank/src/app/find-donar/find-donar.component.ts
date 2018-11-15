@@ -38,6 +38,7 @@ export class FindDonarComponent implements OnInit {
   }
 
   remove() {
+    console.log('hi');
     this.service.removeComponent();
   }
   showLocation(){
@@ -49,6 +50,10 @@ export class FindDonarComponent implements OnInit {
 
       com.selected.subscribe(value => {
         this.city = value;
+
+        if (this.city.length > 0) {
+          this.service.removeComponent();
+        }
 
       });
 

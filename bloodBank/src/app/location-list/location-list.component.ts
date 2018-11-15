@@ -10,7 +10,7 @@ export class LocationListComponent implements OnInit {
 
   locations = ['Chennai', 'Mumbai', 'Hyderbad', 'Pune', 'Bengalore', 'Trichy'];
 
-  selected:BehaviorSubject<string> = new BehaviorSubject('');
+  selected: BehaviorSubject<string> = new BehaviorSubject('');
   constructor() { }
 
   ngOnInit() {

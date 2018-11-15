@@ -1,3 +1,4 @@
+import { BloodRequest } from './blood-request';
 import { BloodDonar } from './bloodDonar';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -38,4 +39,9 @@ invoke() {
     return this.http.get<HttpResponse<Object>>('https://reqres.in/api/users/1').toPromise();
 }
 
+ getAllRequests(): Observable<BloodRequest[]> {
+
+  return this.http.get<BloodRequest[]>(`${this.baseURL}requests`);
+
+  }
 }

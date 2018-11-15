@@ -20,6 +20,8 @@ import { FutureCampsComponent } from './future-camps/future-camps.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { LocationListComponent } from './location-list/location-list.component';
+import { ManageRequestComponent } from './manage-request/manage-request.component';
+import { FilterPipe } from './filter.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { LocationListComponent } from './location-list/location-list.component';
     FutureCampsComponent,
     LoginComponent,
     LogoutComponent,
-    LocationListComponent
+    LocationListComponent,
+    ManageRequestComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

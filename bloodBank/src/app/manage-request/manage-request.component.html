@@ -1,0 +1,23 @@
+<div></div>
+<div>
+    <table class='table table-striped'>
+        <tr>
+            <td>Search By Group</td>
+            <td><input type="text" name="" id="" [(ngModel)]='srchGroup'></td>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <th>Required Group</th>
+            <th>Required Date</th>
+            <th>Hospital Name</th>
+
+        </tr>
+        <tr *ngFor="let eachRequest of requestList | filter:'reqGroup':srchGroup">
+
+            <td>{{eachRequest.id}}</td>
+            <td>{{eachRequest.reqGroup | uppercase}}</td>
+            <td>{{eachRequest.reqDate | date:'medium'}}</td>
+            <td>{{eachRequest.reqHospital}}</td>
+        </tr>
+    </table>
+</div>
