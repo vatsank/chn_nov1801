@@ -11,12 +11,28 @@ export class ManageRequestComponent implements OnInit {
 
   srchGroup = '';
   requestList: BloodRequest[];
+  btnText = 'Add';
+  request: BloodRequest ={
+    id: 0,
+    reqGroup: '',
+    reqDate: new Date(),
+    reqHospital: 'Vijaya'
+  };
+
+
   constructor(private service: BloodBankAPIService) { }
 
   ngOnInit() {
 
     this.service.getAllRequests().subscribe(resp => this.requestList = resp);
 
+  }
+
+  submit(){
+
+    console.log(this.request);
+
+    this.requestList.push(this.request);
   }
 
 }

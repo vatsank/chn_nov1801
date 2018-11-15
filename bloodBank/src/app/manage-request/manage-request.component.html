@@ -1,4 +1,34 @@
-<div></div>
+<div>
+
+
+    <!-- form>(div[class='form-group']>(label+input[class='form-control']))*5 -->
+    <form #frm="ngForm" (ngSubmit)='submit()'>
+        <div class="form-group">
+            <label for="">Id</label>
+            <input type="text" class="form-control" name='id' [(ngModel)]='request.id'>
+        </div>
+        <div>
+
+            <label for="">Required Group</label>
+            <input type="text" class="form-control" name='reqGroup' [(ngModel)]='request.reqGroup'>
+        </div>
+        <div>
+
+            <label for="">Required Date</label>
+            <input type="date" class="form-control" name='reqDate' [(ngModel)]='request.reqDate'>
+        </div>
+        <div>
+
+            <label for="">Required Hospital</label>
+            <input type="text" class="form-control" name='reqHospital' [(ngModel)]='request.reqHospital'>
+        </div>
+        <div>
+
+            <input type="submit" class="btn btn-info" [value]='btnText'>
+        </div>
+    </form>
+    {{request | json}}
+</div>
 <div>
     <table class='table table-striped'>
         <tr>
