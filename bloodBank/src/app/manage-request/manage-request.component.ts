@@ -18,6 +18,7 @@ export class ManageRequestComponent implements OnInit {
     reqDate: new Date(),
     reqHospital: 'Vijaya'
   };
+  editPos: number;
 
   constructor(private service: BloodBankAPIService) { }
 
@@ -26,12 +27,42 @@ export class ManageRequestComponent implements OnInit {
     this.service.getAllRequests().subscribe(resp => this.requestList = resp);
   }
 
-  submit(){
-    console.log(this.request);
+  submit() {
+
+     if(this.btnText === 'Add'){
 
     this.service.addRequest(this.request).subscribe(response => {
 
       this.requestList.push(response);
+    });
+  } else {
+
+     this.service.updateRequest(this.request).subscribe(response => {
+
+       this.requestList[this.editPos] = response;
+     });
+  }
+
+  }
+
+  update(request: BloodRequest){
+
+    this.editPos = this.requestList.indexOf(request);
+
+    this.btnText = 'UPDATE';
+
+    this.request = request;
+
+
+  }
+
+  remove(request: BloodRequest) {
+
+    const idxPos = this.requestList.indexOf(request);
+
+    this.service.removeRequest(request).subscribe(resp => {
+
+       this.requestList.splice(idxPos, 1);
     });
 
   }

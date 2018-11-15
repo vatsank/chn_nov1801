@@ -2,7 +2,7 @@
 
 
     <!-- form>(div[class='form-group']>(label+input[class='form-control']))*5 -->
-    <form #frm="ngForm" (ngSubmit)='submit()'>
+    <form #frm="ngForm" (ngSubmit)='submit()' ngNativeValidate>
         <div class="form-group">
             <label for="">Id</label>
             <input type="text" class="form-control" name='id' [(ngModel)]='request.id'>
@@ -10,7 +10,7 @@
         <div>
 
             <label for="">Required Group</label>
-            <input type="text" class="form-control" name='reqGroup' [(ngModel)]='request.reqGroup'>
+            <input type="text" class="form-control" name='reqGroup' [(ngModel)]='request.reqGroup' required>
         </div>
         <div>
 
@@ -20,7 +20,7 @@
         <div>
 
             <label for="">Required Hospital</label>
-            <input type="text" class="form-control" name='reqHospital' [(ngModel)]='request.reqHospital'>
+            <input type="text" class="form-control" name='reqHospital' [(ngModel)]='request.reqHospital' required>
         </div>
         <div>
 
@@ -48,6 +48,8 @@
             <td>{{eachRequest.reqGroup | uppercase}}</td>
             <td>{{eachRequest.reqDate | date:'medium'}}</td>
             <td>{{eachRequest.reqHospital}}</td>
+            <td><button class="fa fa-2x fa-remove" (click)='remove(eachRequest)'></button></td>
+            <td> <button class='fa fa-2x fa-edit' (click)='update(eachRequest)'></button></td>
         </tr>
     </table>
 </div>

@@ -50,6 +50,19 @@ invoke() {
 
    addRequest(request: BloodRequest): Observable<BloodRequest>{
 
-    return this.http.post<BloodRequest>(`${this.baseURL}requests`, request, {headers: this.hdrs});
+
+    return this.http.post<BloodRequest>(`${this.baseURL}requests`,
+                  request, {headers: this.hdrs});
+   }
+
+   removeRequest(request:BloodRequest): Observable<BloodRequest> {
+
+    return this.http.delete<BloodRequest>(`${this.baseURL}requests/${request.id}`, {headers: this.hdrs});
+   }
+
+   updateRequest(request:BloodRequest):Observable<BloodRequest>{
+
+    return this.http.put<BloodRequest>(`${this.baseURL}requests/${request.id}`, request, {headers: this.hdrs});
+
    }
 }
