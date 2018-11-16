@@ -16,5 +16,7 @@ export class LogoutComponent implements OnInit {
   signOut() {
 
     this.service.changeUserStatus('logout');
+
+    sessionStorage.removeItem('logged');
   }
 }

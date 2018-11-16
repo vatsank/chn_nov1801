@@ -1,3 +1,4 @@
+import { History } from './history';
 import { BloodRequest } from './blood-request';
 import { BloodDonar } from './bloodDonar';
 import { HttpClient, HttpResponse, HttpRequest, HttpHeaders } from '@angular/common/http';

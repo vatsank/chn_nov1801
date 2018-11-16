@@ -4,7 +4,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { BloodDonar } from '../bloodDonar';
 import { Subscriber, Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-
+import {History} from '../history';
 @Component({
   selector: 'app-show-donars',
   templateUrl: './show-donars.component.html',
