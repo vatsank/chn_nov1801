@@ -15,12 +15,25 @@ export class ShowDonarsComponent implements OnInit , OnDestroy{
   donarList: BloodDonar[];
   dummy: Object;
   subs: Subscription;
-  details: Object[];
-  constructor(private service: BloodBankAPIService, private msgService:ComponentInteractionService) { }
+  details: History[];
+  constructor(private service: BloodBankAPIService,private active: ActivatedRoute , private msgService:ComponentInteractionService) { }
 
   ngOnInit() {
 
-         this.msgService.changeUserStatus('HideHeading');
+        // this.msgService.changeUserStatus('HideHeading');
+
+     this.active.params.subscribe(param => {
+
+      const donarId = param['id'];
+
+       if(donarId !== undefined){
+
+         this.service.findDonorHistory(donarId).subscribe(resp =>{
+            this.details = resp;
+         });
+       }
+     });
+
 
    this.subs = this.service.findAllDonors().subscribe(data => this.donarList = data,
                                err => console.log(err),
