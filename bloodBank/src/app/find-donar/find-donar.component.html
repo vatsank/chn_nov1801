@@ -1,27 +1,35 @@
-<div>
-    <ng-template #locRef></ng-template>
-</div>
+<div class='row' class='findPanel'>
+    <div class='col-md-5'>
 
-<div class='form-group'>
+        <h2>Search Donar</h2>
+        <div class='form-group'>
 
-    <label for="location">Location</label>
-    <input type="text" (focus)='showLocation()' id='location' class='form-control' [(ngModel)]='city'>
+            <label for="location">Location</label>
+            <input type="text" (focus)='showLocation()' id='location' class='form-control' [(ngModel)]='city'>
 
-</div>
+        </div>
 
 
-<div class='form-group'>
+        <div class='form-group'>
 
-    <label for="srch">Search Donar</label>
+            <label for="srch">Blood  Group</label>
 
-    <input type="search" id='srch' [(ngModel)]='bloodGroup' (blur)='change()' class='form-control'>
+            <input type="search" id='srch' [(ngModel)]='bloodGroup' (blur)='change()' class='form-control'>
 
-    <button [disabled]='isDisabled' class='btn btn-danger' (click)='find()'>Search</button>
+            <button [disabled]='isDisabled' class='btn btn-danger' (click)='find()'>Search</button>
 
-</div>
+        </div>
 
-<div>
+    </div>
+    <div class='col-md-7'>
 
-    <p>Donar For : {{bloodGroup}}</p>
-    <p>{{donarDetails}}</p>
+        <div>
+            <ng-template #locRef></ng-template>
+        </div>
+
+        <div>
+            <p>Donar For : {{bloodGroup}}</p>
+            <p>{{donarDetails}}</p>
+        </div>
+    </div>
 </div>

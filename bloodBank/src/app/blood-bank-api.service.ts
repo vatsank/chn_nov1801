@@ -55,7 +55,7 @@ invoke() {
                   request, {headers: this.hdrs});
    }
 
-   removeRequest(request:BloodRequest): Observable<BloodRequest> {
+   removeRequest(request: BloodRequest): Observable<BloodRequest> {
 
     return this.http.delete<BloodRequest>(`${this.baseURL}requests/${request.id}`, {headers: this.hdrs});
    }

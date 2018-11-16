@@ -37,10 +37,7 @@ export class FindDonarComponent implements OnInit {
      this.isDisabled = true;
   }
 
-  remove() {
-    console.log('hi');
-    this.service.removeComponent();
-  }
+
   showLocation(){
 
        this.service.setViewRef(this.viewRef);

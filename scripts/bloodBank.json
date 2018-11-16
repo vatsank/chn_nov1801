@@ -32,13 +32,13 @@
       "id": 201,
       "reqGroup": "opos",
       "reqDate": "2018-11-23",
-      "reqHospital": "vijaya"
+      "reqHospital": "vijaya Hospital, vadapalani"
     },
     {
       "id": 202,
       "reqGroup": "bpos",
       "reqDate": "2018-12-12",
-      "reqHospital": "vijaya"
+      "reqHospital": "Malar Hospital"
     },
     {
       "id": 203,
@@ -50,7 +50,7 @@
       "id": 204,
       "reqGroup": "opos",
       "reqDate": "2018-12-19",
-      "reqHospital": "vijaya"
+      "reqHospital": "GH,chennai"
     },
     {
       "id": 205,
