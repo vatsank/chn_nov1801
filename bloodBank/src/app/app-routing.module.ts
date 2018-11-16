@@ -8,6 +8,8 @@ import { FindDonarComponent } from './find-donar/find-donar.component';
 import { ContentComponent } from './content/content.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
+import {RegisterComponent} from './register/register.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
   {path: 'camps', component: CampDetailsComponent},
+  {path: 'register', component: RegisterComponent},
+  {path: 'profile', component: ViewProfileComponent},
   {path: 'request', component: ManageRequestComponent, canActivate: [UniversalGuard]},
   {path: '**', redirectTo: 'login'}
 ];
@@ -26,7 +30,7 @@ const routes: Routes = [
 
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{enableTracing:true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

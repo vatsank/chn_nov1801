@@ -1,10 +1,10 @@
 <div class='row'>
     <div class='col-md-4' style='text-align: center'>
 
-        <img src='assets/images/sign-in.png' class='img-circle img-thumbnail'>
+        <img src='assets/images/register.png' class='img-circle img-thumbnail'>
     </div>
     <div class='col-md-8'>
-        <form [formGroup]='loginForm' (ngSubmit)='signIn()'>
+        <form [formGroup]='regForm' (ngSubmit)='register()'>
 
             <ng-container *ngFor='let eachConfig of frmConfig'>
 
@@ -20,7 +20,4 @@
         </form>
 
     </div>
-    <a [routerLink]="['/register']">New User</a>
 </div>
-
-<div class='badge-info'>{{errorMessage}}</div>

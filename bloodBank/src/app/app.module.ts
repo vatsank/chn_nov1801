@@ -22,6 +22,10 @@ import { LogoutComponent } from './logout/logout.component';
 import { LocationListComponent } from './location-list/location-list.component';
 import { ManageRequestComponent } from './manage-request/manage-request.component';
 import { FilterPipe } from './filter.pipe';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ChildComponent } from './child/child.component';
+import { RegisterComponent } from './register/register.component';
+import { ViewProfileComponent } from './view-profile/view-profile.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { FilterPipe } from './filter.pipe';
     LogoutComponent,
     LocationListComponent,
     ManageRequestComponent,
-    FilterPipe
+    FilterPipe,
+    LifecycleComponent,
+    ChildComponent,
+    RegisterComponent,
+    ViewProfileComponent
   ],
   imports: [
     BrowserModule,

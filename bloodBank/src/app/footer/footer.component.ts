@@ -13,11 +13,11 @@ export class FooterComponent implements OnInit {
 
     this.linkList = [
       {linkRef: 'http://twitter.com', linkText: 'Twitter',
-          style: 'fa fa-2x fa-twitter'},
+          style: 'fa  fa-twitter'},
       {linkRef: 'http://instagram.com', linkText: 'Instagram',
-                  style: 'fa fa-2x fa-instagram'},
+                  style: 'fa fa-instagram'},
       {linkRef: 'http://facebook.com', linkText: 'FaceBook',
-             style: 'fa fa-2x fa-facebook'}
+             style: 'fa fa-facebook'}
 
   ];
    }

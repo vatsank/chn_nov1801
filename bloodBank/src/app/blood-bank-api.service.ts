@@ -4,6 +4,7 @@ import { BloodDonar } from './bloodDonar';
 import { HttpClient, HttpResponse, HttpRequest, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { User } from './user';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,12 @@ export class BloodBankAPIService {
   findAllDonors(): Observable<BloodDonar[]> {
       return this.http.get<BloodDonar[]>(`${this.baseURL}donars`);
   }
+
+  getProfile(name: string): Observable<User> {
+    if (name !== undefined){
+    return this.http.get<User>(`${this.baseURL}users/?userName=${name}`);
+    }
+}
 
 
   findDonorHistory(id: number): Observable<History[]> {
