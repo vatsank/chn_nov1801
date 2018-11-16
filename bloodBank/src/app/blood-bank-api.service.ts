@@ -19,6 +19,11 @@ export class BloodBankAPIService {
       return this.http.get<BloodDonar[]>(`${this.baseURL}donars`);
   }
 
+
+  findDonorHistory(id: number): Observable<History[]> {
+    return this.http.get<History[]>(`${this.baseURL}donationHistory/${id}`);
+}
+
   findAllDonorsWithExceptionHandling(name: string): Observable<BloodDonar[]> {
 
     if(name.length > 10) {

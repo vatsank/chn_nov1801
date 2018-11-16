@@ -1,43 +1,12 @@
 <div class='container' style='display: flex;flex-direction: column'>
-    <div>
+    <div *ngIf='show'>
         <app-header></app-header>
     </div>
     <div>
-        <app-content></app-content>
+
+        <router-outlet></router-outlet>
     </div>
     <div>
         <app-footer></app-footer>
     </div>
 </div>
-
-<div>
-    <app-show-donars></app-show-donars>
-</div>
-
-<div>
-
-    <app-find-donar></app-find-donar>
-
-</div>
-
-<div>
-    <app-search-hospital></app-search-hospital>
-</div>
-
-<div>
-    <app-camp-details></app-camp-details>
-</div>
-
-<div>
-
-    <app-login></app-login>
-    <app-logout></app-logout>
-</div>
-
-<div>
-    <app-manage-request></app-manage-request>
-</div>
-<router-outlet>
-
-
-</router-outlet>

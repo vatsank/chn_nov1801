@@ -1,7 +1,6 @@
-<div>
+<div class='col-md-4'>
 
 
-    <!-- form>(div[class='form-group']>(label+input[class='form-control']))*5 -->
     <form #frm="ngForm" (ngSubmit)='submit()' ngNativeValidate>
         <div class="form-group">
             <label for="">Id</label>
@@ -27,7 +26,6 @@
             <input type="submit" class="btn btn-info" [value]='btnText'>
         </div>
     </form>
-    {{request | json}}
 </div>
 <div>
     <table class='table table-striped'>

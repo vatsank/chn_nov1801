@@ -1,10 +1,10 @@
 <nav class='nav'>
     <ul class='navbar'>
         <li *ngFor='let eachLink of navLinks' class='nav-item'>
-            <a [href]='eachLink.linkRef' class='nav-link'>{{eachLink.linkText}}</a>
+            <a [routerLink]="[eachLink.linkRef]" class='nav-link'>{{eachLink.linkText}}</a>
         </li>
-        <li class='nav-item' *ngIf='showLogin'><a href='' class='nav-link'>Login</a></li>
-        <li class='nav-item' *ngIf='showLogout'><a href='' class='nav-link'>Logout</a></li>
+        <li class='nav-item' *ngIf='showLogin'><a [routerLink]="['login']" class='nav-link'>Login</a></li>
+        <li class='nav-item' *ngIf='showLogout'><a [routerLink]="['logout']" class='nav-link'>Logout</a></li>
 
     </ul>
 </nav>

@@ -5,11 +5,13 @@
         <td>{{eachDonar.name}}</td>
         <td>{{eachDonar.bloodGroup}}</td>
         <td>{{eachDonar.mobileNumber}}</td>
+        <td><a [routerLink]="['/donar',eachDonar.id]">Donation History</a></td>
+
     </tr>
 </table>
 
 
-
+{{details}}
 <!-- <div>
     Id: {{dummy.data.id}} name: {{dummy.data.first_name}}
     <img src={{dummy.data.avatar}}>

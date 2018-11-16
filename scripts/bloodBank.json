@@ -1,62 +1,72 @@
 {
-  "donars": [
-    {
-      "id": 101,
-      "name": "ramesh",
-      "group": "bpos",
-      "mobileNumber": 98560060
-    },
-    {
-      "id": 102,
-      "name": "suresh",
-      "group": "apos",
-      "mobileNumber": 78560060
-    },
-    {
-      "id": 103,
-      "name": "magesh",
-      "group": "opos",
-      "mobileNumber": 68570060
-    },
-    {
-      "id": 104,
-      "name": "rajesh",
-      "group": "bneg",
-      "mobileNumber": 98460020
-    }
-  ],
-  "hospitals": [],
-  "donationCamps": [],
-  "requests": [
-    {
-      "id": 201,
-      "reqGroup": "opos",
-      "reqDate": "2018-11-23",
-      "reqHospital": "vijaya Hospital, vadapalani"
-    },
-    {
-      "id": 202,
-      "reqGroup": "bpos",
-      "reqDate": "2018-12-12",
-      "reqHospital": "Malar Hospital"
-    },
-    {
-      "id": 203,
-      "reqGroup": "opos",
-      "reqDate": "2018-11-13",
-      "reqHospital": "vijaya Hospital, vadapalani"
-    },
-    {
-      "id": 204,
-      "reqGroup": "opos",
-      "reqDate": "2018-12-19",
-      "reqHospital": "GH,chennai"
-    },
-    {
-      "id": 205,
-      "reqGroup": "apos",
-      "reqDate": "2018-11-29",
-      "reqHospital": "vijaya"
-    }
-  ]
+    "donars": [{
+            "id": 101,
+            "name": "ramesh",
+            "group": "bpos",
+            "mobileNumber": 98560060
+        },
+        {
+            "id": 102,
+            "name": "suresh",
+            "group": "apos",
+            "mobileNumber": 78560060
+        },
+        {
+            "id": 103,
+            "name": "magesh",
+            "group": "opos",
+            "mobileNumber": 68570060
+        },
+        {
+            "id": 104,
+            "name": "rajesh",
+            "group": "bneg",
+            "mobileNumber": 98460020
+        }
+    ],
+    "hospitals": [],
+    "donationHistory": [{
+            "id": 101,
+            "details": [{ "date": "2018-1-10", "hospital": "Malar" }, { "date": "2018-10-11", "hospital": "GH" }]
+        },
+        {
+            "id": 102,
+            "details": [{ "date": "2017-2-21", "hospital": "ESI" }, { "date": "2017-10-11", "hospital": "Cavery" }]
+        }, {
+            "id": 103,
+            "details": [{ "date": "2017-3-11", "hospital": "Apollo" }, { "date": "2017-10-11", "hospital": "ESI" }]
+        }
+    ],
+    "donationCamps": [],
+    "requests": [{
+            "id": 201,
+            "reqGroup": "opos",
+            "reqDate": "2018-11-23",
+            "reqHospital": "vijaya Hospital, vadapalani"
+        },
+        {
+            "id": 202,
+            "reqGroup": "bpos",
+            "reqDate": "2018-12-12",
+            "reqHospital": "Malar Hospital"
+        },
+        {
+            "id": 203,
+            "reqGroup": "opos",
+            "reqDate": "2018-11-13",
+            "reqHospital": "vijaya Hospital, vadapalani"
+        },
+        {
+            "id": 204,
+            "reqGroup": "opos",
+            "reqDate": "2018-12-19",
+            "reqHospital": "GH,chennai"
+        },
+        {
+            "id": 205,
+            "reqGroup": "apos",
+            "reqDate": "2018-11-29",
+            "reqHospital": "vijaya"
+        }
+    ]
 }

@@ -10,15 +10,19 @@ export class HeaderComponent implements OnInit {
 
   logo: string;
   majHeading: string;
+  show = true;
 
   pageLinks: Link[] = [
-    {linkRef: 'searchDonar', linkText: 'Search Donar'},
-    {linkRef: 'requestBlood', linkText: 'Request Blood'},
-    {linkRef: 'history', linkText: 'Donation History'},
-    {linkRef: 'donationCamps', linkText: 'View Camps'},
+    {linkRef: 'home', linkText: 'Home'},
+    {linkRef: 'request', linkText: 'Request Blood'},
+    {linkRef: 'donar', linkText: 'View All Donars'},
+    {linkRef: 'findDonar', linkText: 'Search Donar'},
+    {linkRef: 'camps', linkText: 'View Camps'},
+
 
   ];
-  constructor() {
+
+   constructor() {
 
     this.logo = 'assets/images/logo.jpg';
     this.majHeading = 'Jeevan Blood Bank';

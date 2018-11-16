@@ -1,6 +1,7 @@
 import { ComponentInteractionService } from './../component-interaction.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup ,  Validators, FormBuilder, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,8 +9,10 @@ import { FormGroup ,  Validators, FormBuilder, FormControl } from '@angular/form
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  errorMessage: string;
 
-  constructor(private service: ComponentInteractionService, private builder: FormBuilder) { }
+  constructor(private service: ComponentInteractionService,
+        private route: Router, private builder: FormBuilder) { }
 
   loginForm: FormGroup;
 
@@ -36,12 +39,16 @@ export class LoginComponent implements OnInit {
     const uname = this.loginForm.controls.userName.value;
     const pword =  this.loginForm.controls.passWord.value;
 
-    if(uname === 'india' && pword==='india'){
+    if (uname === 'india' && pword === 'india'){
            this.service.changeUserStatus('logged');
+
            sessionStorage.setItem('logged', 'yes');
+
+           this.route.navigate(['home']);
+    } else {
+
+      this.errorMessage = 'Invalid userName or pass word';
     }
-
-
   }
 
 
