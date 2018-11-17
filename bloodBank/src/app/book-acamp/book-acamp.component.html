@@ -1,0 +1,23 @@
+<div class='row'>
+    <div class='col-md-4' style='text-align: center'>
+
+        <img src='assets/images/booking.jpg' class='img-circle img-thumbnail'>
+    </div>
+    <div class='col-md-8'>
+        <form [formGroup]='bookForm' (ngSubmit)='register()'>
+
+            <ng-container *ngFor='let eachConfig of frmConfig'>
+
+                <div class='form-group'>
+                    <label>{{eachConfig.label}}</label>
+                    <input [type]='eachConfig.type' [name]='eachConfig.name' formControlName={{eachConfig.name}} class='form-control'>
+                </div>
+
+            </ng-container>
+
+            <input type='submit' value='Request' class='btn btn-danger'>
+
+        </form>
+
+    </div>
+</div>

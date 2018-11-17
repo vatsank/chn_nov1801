@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
     {linkRef: 'request', linkText: 'Request Blood'},
     {linkRef: 'donar', linkText: 'View All Donars'},
     {linkRef: 'findDonar', linkText: 'Search Donar'},
-    {linkRef: 'camps', linkText: 'View Camps'},
+    {linkRef: 'viewCamp', linkText: 'Donation Camps'},
 
 
   ];

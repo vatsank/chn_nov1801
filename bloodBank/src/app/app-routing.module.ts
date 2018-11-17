@@ -10,6 +10,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
 import {RegisterComponent} from './register/register.component';
+import { PastCampsComponent } from './past-camps/past-camps.component';
+import { FutureCampsComponent } from './future-camps/future-camps.component';
+import { ViewCampComponent } from './view-camp/view-camp.component';
+import { BookACampComponent } from './book-acamp/book-acamp.component';
 
 
 const routes: Routes = [
@@ -20,7 +24,11 @@ const routes: Routes = [
   {path: 'donar/:id', component: ShowDonarsComponent ,canDeactivate:[UniversalGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'logout', component: LogoutComponent},
-  {path: 'camps', component: CampDetailsComponent},
+  {path: 'viewCamp', component: ViewCampComponent,children:[
+    {path: 'camps', component: CampDetailsComponent},
+    {path: 'bookcamp', component: BookACampComponent},
+  ]},
+
   {path: 'register', component: RegisterComponent},
   {path: 'profile', component: ViewProfileComponent},
   {path: 'request', component: ManageRequestComponent, canActivate: [UniversalGuard]},

@@ -26,6 +26,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ChildComponent } from './child/child.component';
 import { RegisterComponent } from './register/register.component';
 import { ViewProfileComponent } from './view-profile/view-profile.component';
+import { ViewCampComponent } from './view-camp/view-camp.component';
+import { BookACampComponent } from './book-acamp/book-acamp.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ViewProfileComponent } from './view-profile/view-profile.component';
     LifecycleComponent,
     ChildComponent,
     RegisterComponent,
-    ViewProfileComponent
+    ViewProfileComponent,
+    ViewCampComponent,
+    BookACampComponent
   ],
   imports: [
     BrowserModule,
